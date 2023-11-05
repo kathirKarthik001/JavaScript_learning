@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <label for="n1">Number 1 :</label>
+        <input type="number" name="num1" id="n1">
+    <br>
+    <br>
+        <label for="n2">Number 2 :</label>
+        <input type="number" name="num2" id="n2">
+    <br>
+    <br>
+        <button onclick="add()">ADD</button>
+    
+    <br>
+    <br>
+    <label for="result">Result : </label>
+    <input type="text" id="result" value="">
+    
+    
+    
+    <script>
+        function add(){
+            var a  = document.getElementById("n1")          // making the whole element with id
+            var b  = document.getElementById("n2")         
+            var r = document.getElementById("result")
+
+            a = Number(a.value)                 // accessing the value and converting it into number data type
+            b = Number(b.value)
+
+                      
+
+            r.value = a + b          // changing the text content in p tag
+            
+    
+        }
+    </script>
+   
+
+
+    <h1 id="h">Tiruppur</h1>
+    <button onclick="shut()">Travel</button>
+
+    <script>
+        function shut(){
+            var a = document.getElementById("h")
+            a.textContent ="Coimbatore"                     // when button is clicked tiruppur ===> Coimbatore occurs
+        }
+    </script>
+</body>
+</html>

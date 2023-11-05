@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        div {
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+
+        .widthmax {
+            width: 700px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="box"></div>
+    <br>
+    <button onclick="color()">Change Color</button>
+    <br>
+    <br>
+    <button onclick="toggleSize()">Toggle Size</button>
+    <script>
+        var x = document.getElementById("box")
+        var sizeToggled = true // Variable to track the size toggle state
+
+        function color() {
+            x.style.backgroundColor = "red"
+        }
+
+        function toggleSize() {
+            if (sizeToggled) {
+                x.classList.add("widthmax")
+               
+            } else {
+                x.classList.remove("widthmax") 
+               
+            }
+            sizeToggled = !sizeToggled
+        }
+    </script>
+</body>
+</html>
