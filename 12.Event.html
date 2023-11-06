@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bo" style="border:rgb(0, 0, 0) 3px solid;padding:20px; margin:50px;width:300px;height:300px">
+
+                <h1 id="head">names</h1>
+                <button id="b1" onclick="f1(event)">Kathir</button>
+                <button id="b2" onclick="f1(event)">Mounish</button>
+                <button id="b3" onclick="f1(event)">Nithilan</button>
+    </div>
+
+   <script>
+      var n = document.getElementById("head")
+    //   event ---> Object which contains all info of the element 
+    //  target ----> used to select the particular line of code from the event
+    // textcontent ---> will get the text from <button id="b1" onclick="f1(event)">Kathir</button>
+
+       function f1(event){                           
+             n.textContent = event.target.textContent
+         }                                               
+            
+            
+     </script>
+
+     <h1 onclick="f2(event)">one</h1>
+     <h1 onclick="f2(event)">two</h1>
+     <h1 onclick="f2(event)">Three</h1>
+     <h1 onclick="f2(event)">four</h1>
+     <h1 onclick="f2(event)">five</h1>
+     
+     <script>
+        function f2(){
+            event.target.remove()         // remove function is used to remove the target line of code from the source file
+            // event.target.textContent =null
+        }
+     </script>
+
+</body>
+</html>

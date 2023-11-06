@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <h1>hello</h1>
+        Kathir
+    </div>
+    <script>
+        var s = document.getElementById("box")
+        console.log(s.textContent)   // .textContent fetches only the text content from the given element ==> Hello kathir
+       console.log( s.innerHTML)            // prints  <h1>hello</h1> in the console
+       s.innerHTML = "<h1> Inner Html </h1>"          // repalces <h1>hello</h1> ===> with "<h1> Inner Html </h1>"
+    </script> 
+
+    <!-- ------Selectors ------ -->
+
+    <h1 class="h" id="kathir">one</h1>
+    <h1 class="h">two</h1>
+    <h1 class="h">Three</h1>
+
+    <script>
+        var div = document.querySelector(".h")        // queryselector --->for selecting only the first occuring class or id or element
+        console.log(div)
+        console.log("")
+
+        var div2 = document.querySelectorAll(".h")     // queryselector --->for selecting only the all occuring class or id or element
+        // console.log(div2)            // output ---> NodeList(3) [h1.h, h1.h, h1.h]    
+
+        for(var count=0;count<div2.length;count++){              // printing the node list ---> same as the other lists
+            console.log(div2[count])
+        }
+
+
+        var cl = document.getElementsByClassName("h")    // output ---> HtmlList(3) [h1.h, h1.h, h1.h] 
+        console.log(cl[0].textContent)                               // selecting only the necessary element with the help of the index
+
+
+        var gh = document.getElementsByTagName("h1")     // selecting the elements with the help of the tag name
+        console.log(gh[3].textContent)  
+        
+        var kk = document.getElementById("kathir")           // Selecting the element with help of the Id
+        console.log(kk)
+
+    </script>
+
+</body>
+</html>

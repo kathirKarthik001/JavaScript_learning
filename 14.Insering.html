@@ -1,0 +1,34 @@
+<style>
+    div{
+        border: 3px black solid;
+        width: fit-content; 
+    }
+</style>
+<div>
+    <h1>Kathir</h1>
+    <h1>Mounish</h1>
+</div> 
+                                            <!-- appending -->
+ <script>
+    var div = document.querySelector("div")
+    var nnn = document.createElement("h1")
+    nnn.innerHTML="<h1>Nithilan</h1>"
+    div.append(nnn)
+</script>
+                                            <!-- prepending -->
+<script>
+    var div2 = document.querySelector("div")
+    div2.prepend("Nithilan valan")
+</script>
+                                        <!-- insertAdjacentElement -->
+<script>
+    var div3 = document.querySelector("div")
+    var h = document.createElement("h1")
+    h.innerHTML="<h1>Nithilan</h1>"
+
+    div3.insertAdjacentElement("beforebegin",h)   // above the div box
+    div3.insertAdjacentElement("beforeend",h)    // inside div ----> at the last
+
+    div3.insertAdjacentElement("afterbegin",h)  // inside div -----> at the top
+    div3.insertAdjacentElement("afterend",h)    // below the div box
+</script>

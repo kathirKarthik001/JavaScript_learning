@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="txt"> Type here :</label>
+    <input type="text"  id="txt"  onkeyup="update()">
+    <h1>Text will appear below :</h1>
+    <h3 id="res"></h3>
+    <script>
+        var x = document.getElementById("txt")
+        var y = document.getElementById("res")
+
+        function update(){
+            y.textContent = x.value
+        }
+    </script>
+
+
+    <button onclick="hp()">add Hello</button>
+    <div id="s"></div>
+    <script>
+        var s = document.getElementById("s")
+        function hp(){
+            var h = document.createElement("h1")
+            h.textContent ="Hello"
+            s.append(h)
+            }
+    </script>
+
+    <br>
+    <br>
+
+    <button id="c" onclick="cc()">Change Colour</button>
+    <script>
+        var w = document.getElementById("c")
+        function cc(){
+            w.style.backgroundColor="red"
+        }
+    </script>
+
+
+<br>
+<br>
+<br>
+
+
+
+<div class="bo" style="border:rgb(0, 0, 0) 3px solid;padding:20px; margin:50px;width:300px;height:300px">
+<h1 id="head">names</h1>
+<button id="b1" onclick="f1()">Kathir</button>
+<button id="b2" onclick="f2()">Mounish</button>
+<button id="b3" onclick="f3()">Nithilan</button>
+</div>
+<script>
+    var n = document.getElementById("head")
+    var b1 = document.getElementById("b1")
+    var b2 = document.getElementById("b2")             
+    var b3 = document.getElementById("b3")
+    function f1(){
+       n.textContent= b1.textContent
+    }
+    function f2(){
+       n.textContent= b2.textContent
+    }
+    function f3(){
+       n.textContent= b3.textContent
+    }
+</script>
+
+</body>
+</html>
