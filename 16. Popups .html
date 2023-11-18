@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #overlay{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: black;
+            opacity: 0.8;
+            z-index: 1;
+            display: none;
+            
+        }
+
+        #popup{
+            background-color: white;
+            color: black;
+            position: absolute;
+            left: 30%;
+            top: 30%;
+            width: 500px;
+            padding: 50px;
+            z-index: 2;
+            display: none;
+        }
+
+        #btn{
+            position: absolute;
+            left:43%;
+            top: 30%;
+            height: 100px;
+            width: 200px;
+           font-size: xx-large;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <button onclick="show()" id="btn">Popup</button>
+
+    <div id="overlay"></div>
+    <div id="popup">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio impedit corporis vel velit recusandae minus quisquam nulla unde perferendis quod ab, totam saepe. Consequuntur quidem itaque sint et dicta?
+        <br>
+        <br>
+        <button onclick="closepopup()">Close</button>
+    </div>
+
+
+
+    <script>
+
+        var o = document.getElementById("overlay")
+        var p = document.getElementById("popup")
+
+        function show(){
+
+            o.style.display = "Block"
+            p.style.display = "Block"
+        }
+
+        function closepopup(){
+
+            o.style.display = "none"
+            p.style.display = "none"
+        }
+
+    </script>
+
+
+
+</body>
+</html>
